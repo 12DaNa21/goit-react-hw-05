@@ -1,12 +1,14 @@
 .backLink{
     border: 1px solid black;
-    background-color: rgb(198, 191, 191);
-    color: black;
+    border-radius: 4px;
+    background-color: white;
+    color: rgb(133, 13, 13);
     text-decoration: none;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 45px;
-    height: 20px;
+    height: 25px;
+    padding: 4px;
 }
 .container{
     display: flex;
