@@ -1,4 +1,4 @@
-// import css from "./MoviesPage.module.css"
+import css from "./MoviesPage.module.css"
 import { useEffect, useState } from "react";
 import MovieSearchForm from "../../components/MovieSearchForm/MovieSearchForm";
 import { getMovie } from "../../movies-api";
