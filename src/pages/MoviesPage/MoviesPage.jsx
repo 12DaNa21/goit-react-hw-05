@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import MovieSearchForm from "../components/MoovieSearchForm";
-import { getMovie } from "../movies-api";
-import MovieList from "../components/MovieList";
+import MovieSearchForm from "../../components/MovieSearchForm/MovieSearchForm";
+import { getMovie } from "../../movies-api";
+import MovieList from "../../components/MovieList/MovieList";
 import { useSearchParams } from "react-router-dom";
 export default function MoviesPage(){
 

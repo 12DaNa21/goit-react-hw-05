@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams} from "react-router-dom";
-import { getMovieReviews } from "../movies-api";
+import { getMovieReviews } from "../../movies-api";
 import { nanoid } from "nanoid";
 
 export default function MovieReviews() {
