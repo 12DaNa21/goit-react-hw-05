@@ -1,4 +1,6 @@
 import toast, {Toaster} from 'react-hot-toast';
+import css from './MovieSearchForm.module.css'
+import { FaSearch } from "react-icons/fa";
 import { Formik, Form, Field } from 'formik';
 export default function MovieSearchForm({onSearch}){
     return <Formik
@@ -13,10 +15,10 @@ export default function MovieSearchForm({onSearch}){
       actions.resetForm();
     }}
   >
-    <Form>
+    <Form className={css.form}>
       <Field name="query">
         {({ field }) => (
-          <input
+          <input className={css.input}
             {...field}
             type="text"
             autoComplete="off"
@@ -24,7 +26,7 @@ export default function MovieSearchForm({onSearch}){
           />
         )}
       </Field>
-      <button type="submit">Search</button>
+      <button className={css.srchbtn} type="submit"><FaSearch className={css.icon}/>Search</button>
       <Toaster position="top-right" reverseOrder={false}/>
     </Form>
   </Formik>

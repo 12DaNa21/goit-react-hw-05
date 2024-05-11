@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import css from './MovieCast.module.css'
 import { useParams } from 'react-router-dom';
 import { getMovieCast } from '../../movies-api';
 
@@ -26,12 +27,12 @@ export default function MovieCast() {
       {cast && cast.length > 0 ? (
         <ul>
           {cast.map(actor => (
-            <li key={actor.id}>
+            <li className={css.cast} key={actor.id}>
               <img
                 src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
                 alt="actor photo"
               />
-              <p>{actor.name}</p>
+              <p className={css.actor}>{actor.name}</p>
               <p>Character: {actor.character}</p>
             </li>
           ))}

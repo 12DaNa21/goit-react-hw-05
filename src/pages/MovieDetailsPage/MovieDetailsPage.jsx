@@ -2,7 +2,7 @@ import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import css from './MovieDetailsPage.module.css';
 import { getMovieByid } from '../../movies-api';
-import { AiFillHome } from "react-icons/ai";
+import { MdOutlineArrowBack } from "react-icons/md";
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
@@ -29,9 +29,9 @@ export default function MovieDetailsPage() {
   }, [movieId]);
 
   return (
-    <div >
+    <div className={css.page}>
       <Link to={backLinkURLRef.current} className={css.backLink}>
-      <AiFillHome color="rgb(180, 12, 12)" size="12" />Go back
+      <MdOutlineArrowBack color="rgb(180, 12, 12)" size="18" />Go back
       </Link>
       {loading && <b>Loading information about movie</b>}
       {error && <b>Sorry, we have some troubles</b>}
@@ -57,7 +57,7 @@ export default function MovieDetailsPage() {
         </div>
       )}
       <hr />
-      <p>Additional information</p>
+      <p className={css.info}>Additional information</p>
       <ul>
         <li>
           <Link to="cast">Cast</Link>

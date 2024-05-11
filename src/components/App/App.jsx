@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <>
-    <Layout>
+    <Layout className={css.nav}>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/movies' element={<MoviesPage/>}/>
